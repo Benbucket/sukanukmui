@@ -17,7 +17,7 @@ const Carousel = () => {
     {
       title: "Manage Court",
       image: court,
-      to: "/manage-court"
+      to: "/venues"
     },
     {
       title: "View Booking Report",

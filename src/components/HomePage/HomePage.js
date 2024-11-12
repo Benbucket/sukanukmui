@@ -1,20 +1,21 @@
 // HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar';
 import Hero from '../Hero';
 import Carousel from '../Carousel';
+import Layout from '../Layout';
 import './HomePage.css';
 
 const HomePage = () => {
     return (
+    <Layout>
       <div className="homepage">
-        <Navbar />
         <main>
           <Hero />
           <Carousel />
         </main>
       </div>
+    </Layout>
     );
   };
   
