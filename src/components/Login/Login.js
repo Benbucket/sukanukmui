@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../UserContext';
 import './Login.css';
 
 
 function Login() {
   const navigate = useNavigate();
+  const { login } = useContext(UserContext);
   const [credentials, setCredentials] = useState({
     username: '',
     password: ''
@@ -21,6 +23,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Login attempted with:', credentials);
+    login(credentials.username);
     navigate('/home');
   };
 
